@@ -1,0 +1,9 @@
+PATCH  http://localhost:3000/Projects/Quotation/Customers/2e67066d-2fbe-49a2-9873-d66523a50f21
+content-type: application/json
+
+{
+    "inDataToInsert":{
+        "CustomerName":"Sree",
+        "CustomerContact:":111
+    }
+}

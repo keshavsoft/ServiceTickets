@@ -1,0 +1,17 @@
+POST http://localhost:3017/Projects/Ticketing/Tickets/Upload
+content-type: application/json
+
+{
+    "inDataToInsert":[
+    {
+        "OrderaName":"Pavan",
+        "Qty:":1
+    },
+    {
+        "OrderaName":"Pavan",
+        "Qty:":2
+    }    
+    ]
+    
+    
+}

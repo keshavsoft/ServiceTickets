@@ -1,0 +1,36 @@
+{
+  "name": "expressesm",
+  "version": "1.0.0",
+  "description": "express with esm",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "nodemon": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keshavsoft/ExpressESM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keshavsoft/ExpressESM/issues"
+  },
+  "homepage": "https://github.com/keshavsoft/ExpressESM#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "lowdb": "^6.1.1",
+    "multer": "^1.4.5-lts.1",
+    "sequelize": "^6.35.2",
+    "sqlite3": "^5.1.6",
+    "ws": "^8.15.1"
+  }
+}

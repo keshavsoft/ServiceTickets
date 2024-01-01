@@ -1,0 +1,9 @@
+POST  http://localhost:3000/Projects/Quotation/Customers
+content-type: application/json
+
+{
+    "inDataToInsert":{
+        "CustomerName":"Keshav",
+        "CustomerContact:":999999
+    }
+}

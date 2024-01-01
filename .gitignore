@@ -1,0 +1,8 @@
+node_modules/
+
+KData/JSON/
+web.config
+
+public/Projects/
+
+.env

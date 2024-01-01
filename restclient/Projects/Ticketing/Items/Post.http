@@ -1,0 +1,9 @@
+POST  http://localhost:3000/Projects/Quotation/Items
+content-type: application/json
+
+{
+    "inDataToInsert":{
+        "ItemName":"RedMi",
+        "Rate:":15000
+    }
+}

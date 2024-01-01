@@ -1,0 +1,9 @@
+PATCH  http://localhost:3000/Projects/Quotation/Orders/4c5ff0f9-70c1-47db-8fae-3cdcaa7eb7d3
+content-type: application/json
+
+{
+    "inDataToInsert":{
+        "OrderaName":"Pavankumar",
+        "Qty:":11
+    }
+}

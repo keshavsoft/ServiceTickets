@@ -1,0 +1,9 @@
+PATCH  http://localhost:3000/Projects/Quotation/Items/f1101c6d-308b-4003-ab90-dcd46f8bb335
+content-type: application/json
+
+{
+    "inDataToInsert":{
+        "ItemName":"Redmi",
+        "Rate:":13000
+    }
+}
