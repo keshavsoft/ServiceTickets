@@ -1,1 +1,1 @@
-GET http://localhost:3000/admin/SetUp
+GET http://localhost:3017/admin/SetUp
