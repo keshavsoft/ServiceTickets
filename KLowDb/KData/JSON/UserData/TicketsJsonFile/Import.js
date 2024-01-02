@@ -16,6 +16,12 @@ let StartFunc = ({ inDataToInsert }) => {
 
     const db = JSONSyncPreset(LocalReturnData.UserDataFilePath, defaultData);
     let LocalInsertdata = getUnmatchedData(inDataToInsert, db.data);
+
+    if (LocalInsertdata.length === 0) {
+        LocalReturnData.KReason = "Duplicates found...";
+        return LocalReturnData;
+    };
+
     let LocalinDataToInsert = LocalFunc({ inDataToInsert: LocalInsertdata });
 
     db.data.push(...LocalinDataToInsert);
