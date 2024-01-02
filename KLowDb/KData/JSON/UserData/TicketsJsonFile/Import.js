@@ -15,13 +15,18 @@ let StartFunc = ({ inDataToInsert }) => {
     const defaultData = { error: "From KLowDb" };
 
     const db = JSONSyncPreset(LocalReturnData.UserDataFilePath, defaultData);
-    let LocalinDataToInsert = LocalFunc({ inDataToInsert });
+    let LocalInsertdata = getUnmatchedData(inDataToInsert, db.data);
+    let LocalinDataToInsert = LocalFunc({ inDataToInsert: LocalInsertdata });
 
     db.data.push(...LocalinDataToInsert);
     db.write();
     LocalReturnData.KTF = true;
 
     return LocalReturnData;
+};
+
+const getUnmatchedData = (arr1, arr2) => {
+    return arr1.filter(item1 => !arr2.some(item2 => item1.Jobno === item2.Jobno));
 };
 
 const LocalFunc = ({ inDataToInsert }) => {
