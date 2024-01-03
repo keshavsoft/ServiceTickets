@@ -4,5 +4,6 @@ KData/JSON/
 web.config
 
 public/Projects/
+public/bs5/
 
 .env
