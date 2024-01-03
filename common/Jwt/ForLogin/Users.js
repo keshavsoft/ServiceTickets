@@ -1,14 +1,14 @@
 import jwt from 'jsonwebtoken';
 let CommonEnvVariable = "KS_TOKEN_FORUSERS";
 
-let CreateToken = ({ inUserName }) => {
+let CreateToken = ({ InUserId }) => {
     if (CommonEnvVariable in process.env === false) {
         console.log(`${CommonEnvVariable} not found in .env File`);
         return false;
     };
 
     let LocalToken = process.env[CommonEnvVariable];
-    var token = jwt.sign({ UserName: inUserName }, LocalToken);
+    var token = jwt.sign({ InUserId }, LocalToken);
     return token;
 };
 
@@ -21,8 +21,14 @@ let VerifyToken = (req, res, next) => {
 
     let LocalToken = process.env[CommonEnvVariable];
     let LocalTokenFromCookie = req.cookies.KToken;
-    var decoded = jwt.verify(LocalTokenFromCookie, LocalToken);
-    next();
+
+    try {
+        var decoded = jwt.verify(LocalTokenFromCookie, LocalToken);
+        next();
+
+    } catch (error) {
+        res.sendStatus(403);
+    }
     // return decoded;
 };
 
