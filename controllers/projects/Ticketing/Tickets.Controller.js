@@ -6,6 +6,12 @@ let GetFunc = (req, res) => {
     res.status(200).json(LocalFromRepo);
 };
 
+let BSTableGetFunc = (req, res) => {
+    let LocalFromRepo = GetFuncRepo();
+
+    res.json(LocalFromRepo.JsonData);
+};
+
 let PostFunc = (req, res) => {
     let LocalinDataToInsert = req.body.inDataToInsert;
     let LocalFromRepo = PostFuncRepo({ inDataToInsert: LocalinDataToInsert });
@@ -29,4 +35,4 @@ let PostUploadFunc = (req, res) => {
     res.status(200).json(LocalFromRepo);
 };
 
-export { GetFunc, PostFunc, PatchFunc, PostUploadFunc };
+export { GetFunc, PostFunc, PatchFunc, PostUploadFunc, BSTableGetFunc };

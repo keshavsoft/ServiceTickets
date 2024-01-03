@@ -1,5 +1,6 @@
 let StartFunc = () => {
     console.log(`Listening in some local port : 3017`);
+    console.log(`http server at http://localhost:3017`);
 
     process.env.UUID = uuidv4();
 };
