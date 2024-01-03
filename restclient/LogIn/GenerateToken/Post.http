@@ -1,4 +1,4 @@
-POST http://localhost:3017/login/userData
+POST http://localhost:3017/login/GenerateToken
 content-type: application/json
 
 { "UserName":"vasu", "PassWord":"222" } 

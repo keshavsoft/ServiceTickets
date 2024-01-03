@@ -1,7 +1,13 @@
-import { GetFunc as GetFuncRepo, PostFuncRepo } from '../../Repo/login/userDataRepo.js';
+import { GetFunc as GetFuncRepo, PostFuncRepo, GetUserIdFuncRepo } from '../../Repo/login/userDataRepo.js';
 
 let GetFunc = async (req, res) => {
     let LocalFromRepo = await GetFuncRepo();
+    res.json(LocalFromRepo);
+};
+
+let GetUserIdFunc = async (req, res) => {
+    let LocalUserid = req.params.UserId;
+    let LocalFromRepo = await GetUserIdFuncRepo({ inUserId: LocalUserid });
     res.json(LocalFromRepo);
 };
 
@@ -12,4 +18,5 @@ let PostFunc = (req, res) => {
     res.json(LocalFromRepo);
 };
 
-export { GetFunc, PostFunc };
+
+export { GetFunc, PostFunc, GetUserIdFunc };
