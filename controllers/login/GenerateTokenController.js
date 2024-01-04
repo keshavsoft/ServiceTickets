@@ -12,10 +12,11 @@ let PostFunc = async (req, res) => {
 
     if (LocalFromRepo.KTF) {
         let LocalToken = CreateToken({ InUserId: LocalUserId });
-
+        LocalFromRepo.KToken = LocalToken;
         res.cookie(LocalCookieName, LocalToken, { maxAge: 900000, httpOnly: false });
+        res.json(LocalFromRepo);
 
-        res.send(LocalToken);
+        // res.send(LocalToken);
         return;
     };
 
