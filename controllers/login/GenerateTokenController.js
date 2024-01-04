@@ -1,8 +1,11 @@
 import { PostFuncRepo } from '../../Repo/login/GenerateToken.js';
 import { CreateToken } from "../../common/Jwt/ForLogin/Users.js";
+import PackageJson from '../../package.json'  assert { type: 'json' };
+
 
 let PostFunc = async (req, res) => {
     let { UserName, PassWord } = req.body;
+    let LocalCookieName = PackageJson.Keshavsoft.ForNodejs.Authantication.Forjwt.UserKey;
 
     let LocalFromRepo = await PostFuncRepo({ UserName, PassWord });
     let LocalUserId = LocalFromRepo.UserId;
@@ -10,7 +13,7 @@ let PostFunc = async (req, res) => {
     if (LocalFromRepo.KTF) {
         let LocalToken = CreateToken({ InUserId: LocalUserId });
 
-        res.cookie('KToken', LocalToken, { maxAge: 900000, httpOnly: false });
+        res.cookie(LocalCookieName, LocalToken, { maxAge: 900000, httpOnly: false });
 
         res.send(LocalToken);
         return;

@@ -1,4 +1,14 @@
 {
+  "Keshavsoft": {
+    "ForNodejs": {
+      "Authantication": {
+        "Forjwt": {
+          "AdminKey": "KAToken",
+          "UserKey": "KToken"
+        }
+      }
+    }
+  },
   "name": "expressesm",
   "version": "1.0.0",
   "description": "express with esm",
